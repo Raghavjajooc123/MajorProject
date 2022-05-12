@@ -1,0 +1,119 @@
+% !TeX root = ./main.tex
+\documentclass{iiitkthesis}
+
+%-----------------------------------------
+% Packages
+%-----------------------------------------
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{cite}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{csquotes}
+\usepackage[linesnumbered,algoruled,boxed,lined]{algorithm2e}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{varioref}
+\usepackage{float}
+\usepackage{epstopdf} % To use .eps images
+\usepackage{times}
+\usepackage[section]{placeins} % to keep floats(figures) in the section in which they were issued
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{subfig}
+\usepackage{textcomp}
+\usepackage{sidecap}
+\usepackage{verbatim} %%% for clock comments 
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\usepackage{hyperref}
+
+%-----------------------------------------
+% Start of the document
+%-----------------------------------------
+
+\begin {document}
+
+%-----------------------------------------
+% Title page
+%-----------------------------------------
+
+\begin{titlepage}
+    \begin{center}
+        {\Large  \bfseries OCR of Offline Hindi Handwritten Text}\\
+
+        \vfill
+        B. Tech Major Project\\
+
+        \vfill
+        By:-\\
+        Raghav Jajoo --- 2019KUCP1082\\
+        Rishabh Chauhan --- 2019KUCP1071\\
+        Ayush Kumar Mohanta --- 2019KUCP1033\\
+
+        \vfill
+        Mentor: Dr. Basant Agarwal\\
+
+        \vfill
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=40mm]{figures/IIITKota.png}
+        \end{figure}
+
+        \vfill
+        Computer science and Engineering\\
+        \textbf{INDIAN INSTITUTE OF INFORMATION TECHNOLOGY KOTA}\\
+        MNIT Campus, Jaipur, INDIA.\\
+        2021-2022
+
+    \end{center}
+\end{titlepage}
+  
+%-----------------------------------------
+% Declaration and acknowledgement
+%-----------------------------------------
+
+\input{declaration.tex}
+\input{certificate.tex}
+
+%-----------------------------------------
+% Abstract
+%-----------------------------------------
+
+\begin{abstract}
+    \thispagestyle{empty}
+    
+    Optical Character Recognition is a system which can perform the translation of images from handwritten or printed form to machine-editable form.
+    OCR converts normal scanned documents text-searchable so to allow content search on the same. Hindi being the national language of India, with such huge population makes document managing and preservation difficult in government sector. Hence, this paper presents an efficient algorithm CRNN and CTC for recognition of Hindi script characters from printed documents.
+    One of the major reasons for the poor recognition rate is error in character segmentation. The presence of touching characters in the scanned documents further complicates the segmentation process, creating a major problem when designing an effective character segmentation technique. Preprocessing, character segmentation, feature extraction, and finally, recognition are the major steps which are followed by a general OCR.
+    
+    Keywords - OCR, CRNN, CTC, Preprocessing, character segmentation, Feture Extraction, Recognition.
+\end{abstract}
+
+%-----------------------------------------
+% Table of con, list of figures and tables
+%-----------------------------------------
+
+\tableofcontents
+
+%-----------------------------------------
+% Chapters
+%-----------------------------------------
+
+\include{chapters/ch1_introduction}
+\include{chapters/ch2_hindi}
+\include{chapters/ch3_main_work}
+
+%-----------------------------------------
+% References/ Bibliography
+%-----------------------------------------
+
+\newpage
+\include{bibliography}
+\end{document} 

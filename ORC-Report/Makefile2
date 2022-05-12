@@ -1,0 +1,32 @@
+manual: main.tex 
+	pdflatex main.tex
+	bibtex main
+	pdflatex main.tex
+	pdflatex main.tex
+	cp main.pdf report_main_vineeshvs.pdf	
+	evince report_main_vineeshvs.pdf&
+
+clean:
+	find . -type f -name '*.aux' -exec rm {} + 
+	find . -type f -name '*.aux' -exec rm {} + 
+	find . -type f -name '*.log' -exec rm {} + 
+	find . -type f -name '*.dvi' -exec rm {} + 
+	find . -type f -name '*.toc' -exec rm {} + 
+	find . -type f -name '*.lof' -exec rm {} + 
+	find . -type f -name '*.nav' -exec rm {} + 
+	find . -type f -name '*.out' -exec rm {} +  
+	find . -type f -name '*.snm' -exec rm {} + 
+	find . -type f -name '*.blg' -exec rm {} + 
+	find . -type f -name '*.acn' -exec rm {} + 
+	find . -type f -name '*.ist' -exec rm {} + 
+	find . -type f -name '*.lot' -exec rm {} + 
+	find . -type f -name '*.glo' -exec rm {} + 
+	find . -type f -name '*.gls' -exec rm {} + 
+	find . -type f -name '*.glg' -exec rm {} + 
+	find . -type f -name '*.alg' -exec rm {} + 
+	find . -type f -name '*.idx' -exec rm {} + 
+	find . -type f -name '*.bbl' -exec rm {} + 
+	find . -type f -name '*.acr' -exec rm {} +   
+	find . -type f -name '*.fls' -exec rm {} +   
+	find . -type f -name '*.fdb_latexmk' -exec rm {} +   
+	find . -type f -name '*.gz' -exec rm {} +   
